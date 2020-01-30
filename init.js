@@ -1,4 +1,4 @@
-var content = document.getElementById("contenido");
+var tabla = document.getElementById("tabla");
 var btn  = document.getElementById("boton");
 var con = document.getElementById("icon");
 
@@ -14,7 +14,16 @@ btn.addEventListener('click',function(){
         <p>  email:\n ${datos.email}</p>
         <p> phone: ${datos.phone}</p>
         `
-        console.log(datos);
+            tabla.innerHTML += `
+            <tr>
+            <td>${datos.name.first}</td>
+            <td>${datos.name.last}</td>
+            <td>${datos.email}</td>
+            <td>${datos.phone}</td>
+          </tr>`
+        
+        
+        console.log(data);
     })
 
 });
